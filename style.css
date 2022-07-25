@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,500;1,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.menu{
+background-color: wheat;
+padding: 20px;
+position: fixed;
+z-index: 1000;
+width: 100%;
+}
+.menu-nav{
+    float: right;
+}
+.menu-logo{
+    width: fit-content;
+    display:inline-block;
+}
+.nav-element{
+    color: #000;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    display: inline-block;
+    transition: 1s;
+}
+.nav-element:hover{
+    color: rgb(255, 132, 0);
+    transform: scale(1.3);
+}
+.header{
+    height: 100vh;
+    background: linear-gradient(175deg,#65c7e2,#7ed75b 70%,#fff 70%);
+    position: relative;
+}
+.header-text{
+    position: relative;
+    top: 100px;
+    left: 100px;
+    width: fit-content;
+    animation: color 5s linear 0s infinite 
+}
+@keyframes color {
+    0%{color: #000;}
+    25%{color: rgb(218, 224, 39);}
+    50%{color: rgb(56, 229, 37);}
+    75%{color: rgb(0, 174, 255);}
+    100%{color: #000;}
+}
+.header-btn{
+    text-decoration: none;
+    background: white;
+padding: 10px 40px;
+border-radius: 1111px;
+margin-top: 70px;
+display: block;
+width: fit-content;
+}
+.fon-element1{
+    width: 200px;
+    height: 200px;
+    background: white;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    animation: move 2s linear 0ms infinite alternate;
+}
+.header-fon{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+}
+@keyframes move{
+    0%{
+        transform: translateY(-20vh);
+    }
+    100%{
+        transform: translateY(120vh);
+    }
+}
+.fon-element2{
+    width: 600px;
+    height: 600px;
+    border: 10px dashed black;
+    border-radius: 50%;
+    position: absolute;
+    left: -200px;
+    bottom: -200px;
+    animation: rotate 10s linear 0ms infinite ;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.about-content{
+  max-width: 1000px;
+margin: auto;
+padding: 100px 0px;
+}
+.cards{
+    height: 50vh;
+    background: linear-gradient(5deg,#65c7e2,#7ed75b 70%,#fff 70%);
+}
+.cards-contend{
+   max-width:  1000px;
+    margin: auto;
+}
+.card{
+    background-color: #fff;
+    width: 27%;
+    margin: 0 30px;
+    border-radius: 20px;
+    padding: 25px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.273);
+}
+.card-li{
+    list-style: none;
+    color: #7ed75b;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+.card-img{
+    font-size: 36px;
+    padding: 30px 0;
+}
+.card-btn{
+    background-color: #000;
+    color: white;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 0;
+    transition: 1s;
+}
+.card-btn:hover{
+    transform: scale(0.9);
+    opacity: 0.8;
+
+}
+.form-container{
+    background: #65c7e2;
+    padding: 50px 0;
+}
+.form{
+   max-width: 1000px;
+    margin: auto;
+}
+.input{
+    width: 100%;
+margin-bottom: 25px;
+padding: 5px;
+border-radius: 50px;
+border: none;
+background: #f8f8f8;
+}
+textarea{
+    resize: none;
+    width: 100%;
+}
+@media (max-width: 1000px) { 
+    .cards{
+        height: fit-content;
+        padding-bottom: 100px;
+    }
+    .card{
+        margin-bottom: 20px;
+        display: block;
+        width: 90%;
+    }
+    .form-container{
+        padding: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .header-text{
+        left: 0;
+        padding: 20px  ;
+
+    }
+    
+    .about-content{
+        padding: 20px 20px;
+    }
+    .menu-logo{
+        margin: auto;
+        display: block;
+        padding-bottom: 20px;
+    }
+    .menu-nav{
+        float: none;
+    }
+    .card{
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    
+    
+}
